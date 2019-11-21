@@ -140,10 +140,44 @@ body, html {
     background-color: rgba(0,0,0,.03);
 }
 
+.curso{
+    padding: 25px;
+    text-align: justify;
+}
+
+.curso div{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.curso-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+
+    text-align: justify;
+}
+
+.curso-body div{
+    width: 100%;
+}
+
+.curso-body img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+
 @media screen and (min-width: 600px) {
   .topnav a:not(:first-child) {display: inline-block;}
   .topnav a.icon {
     float: right;
     display: none;
+  }
+
+  .curso-body div{
+      width: 49%;
   }
 }
