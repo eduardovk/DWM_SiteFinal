@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Eduardo V. Kuhn e Filipe Rocha">
+        <title>SITE TRAB FINAL</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <header class="header">
+        <a href="" class="logo"></a>
+        <nav class="topnav" id="topnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+            <a href="#inscricao">Inscrição</a>
+            <a class="icon" onclick="event.preventDefault(); navFunction();">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>TITULO DO SITE</h1>
+            <p>SUBTITULO DO SITE</p>
+        </div>
+    </div>
+    <!-- ///Hero Image -->
+
+    <div class="main">
+
+        <section class="sobre">
+            <div class="title">
+                <h2>Sobre</h2>
+            </div>
+            <div class="sobre-body">
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh ac leo ullamcorper ultrices. Duis interdum consequat sollicitudin. Vivamus id nunc velit. In justo orci, rutrum nec nibh vitae, malesuada consequat arcu. Quisque nec ligula quis ante mattis pretium. Suspendisse suscipit rhoncus molestie. Maecenas a vehicula nisi, in fermentum tortor.
+                    </p>
+                    <a href="#" class="mais">Ler mais...</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="topicos">
+            <div class="topicos-body">
+                <div>
+                    <div class="topico topico-selecionado" id="topico-produtividade" onclick="abrirTopico('produtividade');">
+                        Produtividade
+                    </div>
+                    <p id="produtividade" style="display:block">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus vestibulum odio, sit amet dapibus lacus. Pellentesque vitae sem suscipit, vehicula massa sed, euismod odio. Vestibulum placerat neque ac nunc euismod tempor.
+                    </p>
+                    <div class="topico" id="topico-trabalho" onclick="abrirTopico('trabalho');">
+                        Trabalho em Grupo
+                    </div>
+                    <p id="trabalho">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus vestibulum odio, sit amet dapibus lacus. Pellentesque vitae sem suscipit, vehicula massa sed, euismod odio. Vestibulum placerat neque ac nunc euismod tempor.
+                    </p>
+                    <div class="topico" id="topico-organizacional"' onclick="abrirTopico('organizacional');">
+                        100% Organizacional
+                    </div>
+                    <p id="organizacional">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus vestibulum odio, sit amet dapibus lacus. Pellentesque vitae sem suscipit, vehicula massa sed, euismod odio. Vestibulum placerat neque ac nunc euismod tempor.
+                    </p>
+                    <div class="topico" id="topico-cartoes" onclick="abrirTopico('cartoes');">
+                        Aceitamos Cartões
+                    </div>
+                    <p id="cartoes">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus vestibulum odio, sit amet dapibus lacus. Pellentesque vitae sem suscipit, vehicula massa sed, euismod odio. Vestibulum placerat neque ac nunc euismod tempor.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js">
+    </script>
+
+    <script>
+        function navFunction() {
+            var nav = $('#topnav')
+            if (nav.attr('class') === "topnav") {
+                nav.addClass("responsive");
+            } else {
+                nav.removeClass("responsive");
+            }
+        }
+
+        function abrirTopico(topico){
+            topicos = $('.topicos').find('p');
+            topicos.each(function(){
+                if($(this).attr('id') === topico){
+                    $(this).slideToggle(500);
+                    $('#topico-'+topico).toggleClass('topico-selecionado');
+                }else{
+                    $(this).slideUp(500);
+                    $('#topico-'+$(this).attr('id')).removeClass('topico-selecionado');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
