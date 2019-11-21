@@ -47,7 +47,10 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh ac leo ullamcorper ultrices. Duis interdum consequat sollicitudin. Vivamus id nunc velit. In justo orci, rutrum nec nibh vitae, malesuada consequat arcu. Quisque nec ligula quis ante mattis pretium. Suspendisse suscipit rhoncus molestie. Maecenas a vehicula nisi, in fermentum tortor.
                     </p>
-                    <a href="#" class="mais">Ler mais...</a>
+                    <p style="display:none;" id="sobre">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh ac leo ullamcorper ultrices. Duis interdum consequat sollicitudin. Vivamus id nunc velit. In justo orci, rutrum nec nibh vitae, malesuada consequat arcu. Quisque nec ligula quis ante mattis pretium. Suspendisse suscipit rhoncus molestie. Maecenas a vehicula nisi, in fermentum tortor.
+                    </p>
+                    <a href="#" class="mais" id="lermais-sobre" onclick="event.preventDefault(); lerMais('sobre')">Ler mais...</a>
                 </div>
             </div>
         </section>
@@ -89,27 +92,37 @@
     </script>
 
     <script>
-        function navFunction() {
-            var nav = $('#topnav')
-            if (nav.attr('class') === "topnav") {
-                nav.addClass("responsive");
-            } else {
-                nav.removeClass("responsive");
-            }
+    function navFunction() {
+        var nav = $('#topnav')
+        if (nav.attr('class') === "topnav") {
+            nav.addClass("responsive");
+        } else {
+            nav.removeClass("responsive");
         }
+    }
 
-        function abrirTopico(topico){
-            topicos = $('.topicos').find('p');
-            topicos.each(function(){
-                if($(this).attr('id') === topico){
-                    $(this).slideToggle(500);
-                    $('#topico-'+topico).toggleClass('topico-selecionado');
-                }else{
-                    $(this).slideUp(500);
-                    $('#topico-'+$(this).attr('id')).removeClass('topico-selecionado');
-                }
-            });
+    function lerMais(idTexto){
+        $('#'+idTexto).slideToggle(500);
+        var lermais = $('#lermais-'+idTexto);
+        if(lermais.text() === "Ler mais..."){
+            lermais.text("Menos...");
+        }else{
+            lermais.text("Ler mais...");
         }
+    }
+
+    function abrirTopico(topico){
+        topicos = $('.topicos').find('p');
+        topicos.each(function(){
+            if($(this).attr('id') === topico){
+                $(this).slideToggle(500);
+                $('#topico-'+topico).toggleClass('topico-selecionado');
+            }else{
+                $(this).slideUp(500);
+                $('#topico-'+$(this).attr('id')).removeClass('topico-selecionado');
+            }
+        });
+    }
     </script>
 
 </body>
