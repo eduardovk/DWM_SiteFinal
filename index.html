@@ -36,6 +36,7 @@
     </div>
     <!-- ///Hero Image -->
 
+    <!-- Main -->
     <div class="main">
 
         <!-- Section Sobre -->
@@ -97,7 +98,7 @@
             </div>
             <div class="curso-body">
                 <div>
-                    <img src="img/curso.jpg" alt="">
+                    <img src="img/curso.jpg" alt="" style="margin-bottom: 10px;">
                 </div>
                 <div>
                     <p>
@@ -120,7 +121,38 @@
         </section>
         <!-- ///Section Curso -->
 
+        <!-- Section Galeria -->
+        <section class="galeria">
+            <div class="title">
+                <h2>Galeria</h2>
+            </div>
+            <div class="galeria-body">
+                <div>
+                    <img src="img/curso.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/curso.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/curso.jpg" alt="">
+                </div>
+                <div style="display: none;" class="galeria-hide">
+                    <img src="img/curso.jpg" alt="">
+                </div>
+                <div style="display: none;" class="galeria-hide">
+                    <img src="img/curso.jpg" alt="">
+                </div>
+                <div style="display: none;" class="galeria-hide">
+                    <img src="img/curso.jpg" alt="">
+                </div>
+                <a href="#" class="mais" id="vermais-galeria" onclick="event.preventDefault(); verMais()">Ver mais...</a>
+            </div>
+        </section>
+        <!-- ///Section Galeria -->
+
+
     </div>
+    <!-- ///Main -->
 
     <script src="js/jquery-3.4.1.min.js">
     </script>
@@ -143,6 +175,17 @@
         }else{
             lermais.text("Ler mais...");
         }
+    }
+
+    function verMais(){
+        $('.galeria-hide').slideToggle(500);
+        var vermais = $('#vermais-galeria');
+        if(vermais.text() === 'Ver mais...'){
+            vermais.text('Menos...');
+        }else{
+            vermais.text('Ver mais...');
+        }
+
     }
 
     function abrirTopico(topico){
