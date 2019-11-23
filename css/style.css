@@ -202,6 +202,36 @@ html {
     max-width: 100%;
 }
 
+.localizacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 340px;
+    max-width: 700px;
+    padding: 20px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.localizacao-body {
+    margin: 0 auto;
+}
+
+.localizacao-body img {
+    width: 100%;
+}
+
+.localizacao-body h3 {
+    text-align: center;
+}
+
+.localizacao-body p {
+    text-align: center;
+}
+
+.title-localizacao {
+    text-align: center;
+}
+
 @media screen and (min-width: 600px) {
     .topnav a:not(:first-child) {
         display: inline-block;

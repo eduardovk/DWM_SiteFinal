@@ -200,6 +200,58 @@
         </section>
         <!-- ///Section Galeria -->
 
+        <!-- Section Localizacao -->
+
+        <div class="title">
+            <h2>Localização</h2>
+        </div>
+        <section class="localizacao">
+
+            <div class=" localizacao-body">
+                <img src="./img/poa.jpg" alt="">
+                <p>
+                    <h3>Porto Alegre</h3>
+                </p>
+                <p>
+                    <ion-icon name="pin"></ion-icon>
+                </p>
+                <p>
+                    Av. Ipiranga, 999
+                </p>
+
+                <p>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </p>
+                <p>
+                    @lego4scrum_poa
+                </p>
+
+            </div>
+            <div class=" localizacao-body">
+                <img src="./img/poa.jpg" alt="">
+                <p>
+                    <h3>Viamão</h3>
+                </p>
+                <p>
+                    <ion-icon name="pin"></ion-icon>
+                </p>
+                <p>
+                    Av. Bento G. , 999
+                </p>
+
+                <p>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </p>
+                <p>
+                    @lego4scrum_via
+                </p>
+
+            </div>
+
+
+        </section>
+        <!-- ///Section Localizacao -->
+
 
     </div>
     <!-- ///Main -->
@@ -207,50 +259,9 @@
     <script src="js/jquery-3.4.1.min.js">
     </script>
 
-    <script>
-        function navFunction() {
-            var nav = $('#topnav')
-            if (nav.attr('class') === "topnav") {
-                nav.addClass("responsive");
-            } else {
-                nav.removeClass("responsive");
-            }
-        }
-
-        function lerMais(idTexto) {
-            $('#' + idTexto).slideToggle(500);
-            var lermais = $('#lermais-' + idTexto);
-            if (lermais.text() === "Ler mais...") {
-                lermais.text("Menos...");
-            } else {
-                lermais.text("Ler mais...");
-            }
-        }
-
-        function verMais() {
-            $('.galeria-hide').slideToggle(500);
-            var vermais = $('#vermais-galeria');
-            if (vermais.text() === 'Ver mais...') {
-                vermais.text('Menos...');
-            } else {
-                vermais.text('Ver mais...');
-            }
-
-        }
-
-        function abrirTopico(topico) {
-            topicos = $('.topicos').find('p');
-            topicos.each(function() {
-                if ($(this).attr('id') === topico) {
-                    $(this).slideToggle(500);
-                    $('#topico-' + topico).toggleClass('topico-selecionado');
-                } else {
-                    $(this).slideUp(500);
-                    $('#topico-' + $(this).attr('id')).removeClass('topico-selecionado');
-                }
-            });
-        }
+    <script src="./js/scripit.js">
     </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </body>
 
