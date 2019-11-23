@@ -199,39 +199,6 @@ body, html {
     max-width: 100%;
 }
 
-
-.localizacao{
-    padding: 25px;
-    text-align: justify;
-}
-
-.localizacao div{
-    max-width: 1000px;
-    margin: auto;
-}
-
-.localizacao-body{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
-    margin-bottom: 10px;
-}
-
-.localizacao-body div{
-    width: 100%;
-    text-align: center;
-    max-width: 400px;
-    margin: 15px 0px 15px 0px;
-}
-
-.localizacao-body img{
-    max-width: 100%;
-    margin-bottom: 10px;
-}
-
 @media screen and (min-width: 600px) {
     .topnav a:not(:first-child) {display: inline-block;}
     .topnav a.icon {
@@ -245,9 +212,5 @@ body, html {
 
     .galeria-body div{
         width: 32%;
-    }
-    .localizacao-body div{
-        width: 45%;
-
     }
 }

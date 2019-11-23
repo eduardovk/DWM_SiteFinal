@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="utf-8">
     <title></title>
 </head>
-
 <body>
-
     <head>
-
-        <meta charset="utf-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Eduardo V. Kuhn e Filipe Rocha">
         <meta name="author" content="Eduardo V. Kuhn e Filipe Rocha">
         <meta name="rating" content="general" />
-        <META NAME="GOOGLEBOT" CONTENT="NOARCHIVE">
-        <meta name="copyright" content="© 2019 Lego" />
-        <META NAME="KEYWORDS" CONTENT="lego4scrum, lego, scrum , curso" />
-        <META NAME="ROBOTS" CONTENT="ALL" />
+        <META NAME="GOOGLEBOT" CONTENT="NOARCHIVE">	
+        <meta name="copyright" content="© 2019 Lego" />	
+        <META NAME="KEYWORDS" CONTENT="lego4scrum, lego, scrum , curso"/>
+        <META NAME="ROBOTS" CONTENT="ALL"/>
         <meta http-equiv="content-language" content="pt-br, en-US" />
         <meta name="description" content="Curso de lego com a metodologia agil scrum" />
+        <title>SITE TRAB FINAL</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <header class="header">
@@ -58,12 +54,10 @@
             <div class="sobre-body">
                 <div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh ac leo ullamcorper ultrices. Duis interdum consequat sollicitudin. Vivamus id nunc velit. In justo orci, rutrum nec nibh vitae, malesuada consequat arcu. Quisque nec ligula
-                        quis ante mattis pretium. Suspendisse suscipit rhoncus molestie. Maecenas a vehicula nisi, in fermentum tortor.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh ac leo ullamcorper ultrices. Duis interdum consequat sollicitudin. Vivamus id nunc velit. In justo orci, rutrum nec nibh vitae, malesuada consequat arcu. Quisque nec ligula quis ante mattis pretium. Suspendisse suscipit rhoncus molestie. Maecenas a vehicula nisi, in fermentum tortor.
                     </p>
                     <p style="display:none;" id="sobre">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh ac leo ullamcorper ultrices. Duis interdum consequat sollicitudin. Vivamus id nunc velit. In justo orci, rutrum nec nibh vitae, malesuada consequat arcu. Quisque nec ligula
-                        quis ante mattis pretium. Suspendisse suscipit rhoncus molestie. Maecenas a vehicula nisi, in fermentum tortor.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh ac leo ullamcorper ultrices. Duis interdum consequat sollicitudin. Vivamus id nunc velit. In justo orci, rutrum nec nibh vitae, malesuada consequat arcu. Quisque nec ligula quis ante mattis pretium. Suspendisse suscipit rhoncus molestie. Maecenas a vehicula nisi, in fermentum tortor.
                     </p>
                     <a href="#" class="mais" id="lermais-sobre" onclick="event.preventDefault(); lerMais('sobre')">Ler mais...</a>
                 </div>
@@ -163,26 +157,6 @@
         </section>
         <!-- ///Section Galeria -->
 
-        <section class="localizacao">
-            <div class="title">
-                <h2>Localização</h2>
-            </div>
-            <div class="localizacao-body">
-                <div>
-                    <img src="img/empresa.jpg" alt="">
-                    <p><b>Porto Alegre</b></p>
-                    <p>Av. Ipiranga, 999</p>
-                    <p><i>contatopoa@site.com.br</i></p>
-                </div>
-                <div>
-                    <img src="img/empresa.jpg" alt="">
-                    <p><b>Porto Alegre</b></p>
-                    <p>Av. Ipiranga, 999</p>
-                    <p><i>contatopoa@site.com.br</i></p>
-                </div>
-            </div>
-        </section>
-
 
     </div>
     <!-- ///Main -->
@@ -191,50 +165,49 @@
     </script>
 
     <script>
-        function navFunction() {
-            var nav = $('#topnav')
-            if (nav.attr('class') === "topnav") {
-                nav.addClass("responsive");
-            } else {
-                nav.removeClass("responsive");
+    function navFunction() {
+        var nav = $('#topnav')
+        if (nav.attr('class') === "topnav") {
+            nav.addClass("responsive");
+        } else {
+            nav.removeClass("responsive");
+        }
+    }
+
+    function lerMais(idTexto){
+        $('#'+idTexto).slideToggle(500);
+        var lermais = $('#lermais-'+idTexto);
+        if(lermais.text() === "Ler mais..."){
+            lermais.text("Menos...");
+        }else{
+            lermais.text("Ler mais...");
+        }
+    }
+
+    function verMais(){
+        $('.galeria-hide').slideToggle(500);
+        var vermais = $('#vermais-galeria');
+        if(vermais.text() === 'Ver mais...'){
+            vermais.text('Menos...');
+        }else{
+            vermais.text('Ver mais...');
+        }
+
+    }
+
+    function abrirTopico(topico){
+        topicos = $('.topicos').find('p');
+        topicos.each(function(){
+            if($(this).attr('id') === topico){
+                $(this).slideToggle(500);
+                $('#topico-'+topico).toggleClass('topico-selecionado');
+            }else{
+                $(this).slideUp(500);
+                $('#topico-'+$(this).attr('id')).removeClass('topico-selecionado');
             }
-        }
-
-        function lerMais(idTexto) {
-            $('#' + idTexto).slideToggle(500);
-            var lermais = $('#lermais-' + idTexto);
-            if (lermais.text() === "Ler mais...") {
-                lermais.text("Menos...");
-            } else {
-                lermais.text("Ler mais...");
-            }
-        }
-
-        function verMais() {
-            $('.galeria-hide').slideToggle(500);
-            var vermais = $('#vermais-galeria');
-            if (vermais.text() === 'Ver mais...') {
-                vermais.text('Menos...');
-            } else {
-                vermais.text('Ver mais...');
-            }
-
-        }
-
-        function abrirTopico(topico) {
-            topicos = $('.topicos').find('p');
-            topicos.each(function() {
-                if ($(this).attr('id') === topico) {
-                    $(this).slideToggle(500);
-                    $('#topico-' + topico).toggleClass('topico-selecionado');
-                } else {
-                    $(this).slideUp(500);
-                    $('#topico-' + $(this).attr('id')).removeClass('topico-selecionado');
-                }
-            });
-        }
+        });
+    }
     </script>
 
 </body>
-
 </html>
