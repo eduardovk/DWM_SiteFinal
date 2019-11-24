@@ -258,6 +258,87 @@ html {
     font-style: italic;
 }
 
+.formulario-contato {
+    padding: 40px;
+}
+
+.formulario-contato div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.formulario-contato form {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.formulario-contato input {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: #333 solid 1px;
+    background-color: #ddd;
+    min-height: 30px;
+}
+
+.formulario-contato button {
+    background-color: rgb(15, 235, 22);
+    grid-column-start: 2;
+    border-radius: 10px;
+}
+
+.formulario-contato .title h2 {
+    grid-column-start: 2;
+}
+
+.formulario-contato textarea {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: #333 solid 1px;
+    min-height: 100px;
+    background-color: #ddd;
+}
+
+.formulario-inscricao {
+    padding: 40px;
+}
+
+.formulario-inscricao div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.formulario-inscricao form {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.formulario-inscricao input {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: #333 solid 1px;
+    background-color: #ddd;
+    min-height: 30px;
+}
+
+.formulario-inscricao button {
+    background-color: rgb(15, 235, 22);
+    grid-column-start: 2;
+    border-radius: 10px;
+}
+
+.formulario-inscricao .title h2 {
+    grid-column-start: 2;
+}
+
+.formulario-inscricao input#endereco {
+    grid-column-end: 3;
+}
+
+.formulario-inscricao input#num {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
 @media screen and (min-width: 600px) {
     .topnav a:not(:first-child) {
         display: inline-block;
