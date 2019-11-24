@@ -232,6 +232,32 @@ html {
     text-align: center;
 }
 
+.depoimentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 340px;
+    max-width: 700px;
+    padding: 20px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.depoimento-body-img {
+    justify-self: end;
+}
+
+.depoimento-body-img img {
+    border-radius: 50%;
+}
+
+.depoimento-bory-txt {
+    padding-right: 15px;
+}
+
+.depoimento-bory-txt p {
+    font-style: italic;
+}
+
 @media screen and (min-width: 600px) {
     .topnav a:not(:first-child) {
         display: inline-block;
