@@ -284,6 +284,7 @@ html {
     background-color: rgb(15, 235, 22);
     grid-column-start: 2;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .formulario-contato .title h2 {
@@ -324,6 +325,7 @@ html {
     background-color: rgb(15, 235, 22);
     grid-column-start: 2;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .formulario-inscricao .title h2 {
@@ -337,6 +339,30 @@ html {
 .formulario-inscricao input#num {
     grid-column-start: 3;
     grid-row-start: 1;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70px;
+    background-color: rgb(26, 241, 26);
+}
+
+footer div {
+    padding-top: 10px;
+    justify-self: center
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer div .icons {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    ;
 }
 
 @media screen and (min-width: 600px) {
