@@ -196,6 +196,7 @@ html {
 .galeria-body div {
     width: 100%;
     text-align: center;
+    margin: 0px;
 }
 
 .galeria-body div img {
@@ -377,9 +378,9 @@ footer div .icons {
         width: 49%;
     }
     .galeria-body div {
-        width: 32%;
+        width: 33%;
     }
-    
+
 }
 
 @media screen and (min-width: 900px) {
