@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body onresize="checarResolucao()">
 
     <header class="header">
         <a href="" class="logo"></a>
@@ -64,7 +64,7 @@
                     </p>
                     <br>
 
-                    <p style="display:none;" id="sobre">
+                    <p id="sobre" style="display:none;" >
 
                         Os participantes irão adquirir experiências com as ferramentas utilizadas no framework, compreender e aplicar uma Sprint, um Product Backlog e conceitos comoreuniões diárias, reuniões de planejamento, revisão e retrospectiva, além de técnicas de facilitação
                         para ScrumMaster.
@@ -84,7 +84,7 @@
                         <br> Não há.
 
                     </p>
-                    <a href="#" class="mais" id="lermais-sobre" onclick="event.preventDefault(); lerMais('sobre')">Ler mais...</a>
+                    <a href="#" class="mais" id="mais-sobre" onclick="event.preventDefault(); mais('sobre')">Mais...</a>
                 </div>
             </div>
         </section>
@@ -155,7 +155,7 @@
                     <li>Cada equipe executa para cada iteração um Sprint Planning .</li>
                     <li>Revisão do Sprint após cada iteração / sprint: cada equipe resp. seu Scrum Master demonstra ao Product Owner suas entregas ("Sprint Demo"). E a equipe reflete sobre seu desempenho geral ("Retrospectiva da equipe")</li>
                 </ul>
-                <a href="#" class="mais" id="lermais-curso" onclick="event.preventDefault(); lerMais('curso')">Ler mais...</a>
+                <a href="#" class="mais" id="mais-curso" onclick="event.preventDefault(); mais('curso')">Mais...</a>
             </div>
         </section>
         <!-- /Section Curso -->
@@ -193,7 +193,7 @@
                 <div style="display: none;" class="galeria-hide">
                     <img src="img/4.jpg" alt="">
                 </div>
-                <a href="#" class="mais" id="vermais-galeria" onclick="event.preventDefault(); verMais()">Ver mais...</a>
+                <a href="#" class="mais" id="mais-galeria-hide" onclick="event.preventDefault(); mais('galeria-hide','.')">Mais...</a>
             </div>
         </section>
         <!-- /Section Galeria -->

@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    checarResolucao();
+});
+
 function navFunction() {
     var nav = $('#topnav')
     if (nav.attr('class') === "topnav") {
@@ -7,25 +11,33 @@ function navFunction() {
     }
 }
 
-function lerMais(idTexto) {
-    $('#' + idTexto).slideToggle(500);
-    var lermais = $('#lermais-' + idTexto);
-    if (lermais.text() === "Ler mais...") {
-        lermais.text("Menos...");
-    } else {
-        lermais.text("Ler mais...");
+function checarResolucao(){
+    checarVisibilidade('sobre');
+    checarVisibilidade('curso');
+    checarVisibilidade('galeria-hide', '.');
+}
+
+function checarVisibilidade(idTexto, selector = '#'){
+    var texto = $(selector+idTexto);
+    var botao = $('#mais-'+idTexto);
+    if(window.innerWidth >= 600){
+        texto.show();
+        botao.hide();
+    }else{
+        texto.hide();
+        botao.text("Mais...")
+        botao.show();
     }
 }
 
-function verMais() {
-    $('.galeria-hide').slideToggle(500);
-    var vermais = $('#vermais-galeria');
-    if (vermais.text() === 'Ver mais...') {
-        vermais.text('Menos...');
+function mais(idTexto, selector ='#') {
+    $(selector+idTexto).slideToggle(500);
+    var botao = $('#mais-' + idTexto);
+    if (botao.text() === "Mais...") {
+        botao.text("Menos...");
     } else {
-        vermais.text('Ver mais...');
+        botao.text("Mais...");
     }
-
 }
 
 function abrirTopico(topico) {
