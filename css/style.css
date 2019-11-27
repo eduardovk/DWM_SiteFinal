@@ -10,13 +10,16 @@ html {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lego.jpg");
-    height: 35%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    text-shadow: 3px 3px rgba(0, 0, 0, .2);
+    text-shadow: 3px 3px rgba(0, 0, 0, .4);
+}
+
+video{
+    display: block;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 200px;
+    max-height: 300px;
 }
 
 .hero-text {
@@ -40,6 +43,7 @@ html {
 .topnav {
     overflow: hidden;
     background-color: #333;
+
 }
 
 .topnav a {
@@ -89,6 +93,20 @@ html {
     float: none;
     display: block;
     text-align: left;
+}
+
+body{
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main{
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgba(255,255,255,0.95);
+
+
 }
 
 .title {
@@ -376,6 +394,10 @@ footer div .icons {
     .depoimento-body-img {
         justify-self: end;
     }
+
+    .hero-text h1 {
+        font-size: 55px;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -393,6 +415,18 @@ footer div .icons {
         width: 33%;
     }
 
+    video{
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        /* min-height: 200px; */
+        max-height: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 65px;
+    }
+
 }
 
 @media screen and (min-width: 900px) {
@@ -401,4 +435,9 @@ footer div .icons {
         max-width: 900px;
         padding: 10px;
     }
+
+    .hero-text h1 {
+        font-size: 85px;
+    }
+
 }

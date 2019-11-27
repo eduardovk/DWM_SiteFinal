@@ -12,9 +12,9 @@ function navFunction() {
 }
 
 function checarResolucao(){
-    checarVisibilidade('sobre');
-    checarVisibilidade('curso');
-    checarVisibilidade('galeria-hide', '.');
+    checarVisibilidade('sobre-hidden');
+    checarVisibilidade('curso-hidden');
+    checarVisibilidade('galeria-hiden', '.');
 }
 
 function checarVisibilidade(idTexto, selector = '#'){
