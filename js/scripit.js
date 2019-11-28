@@ -1,5 +1,10 @@
 $(document).ready(function() {
     checarResolucao();
+    $("#js-rotating").Morphext({
+        animation: "flipInY",
+        separator: ",",
+        speed: 2000
+    });
 });
 
 function navFunction() {
