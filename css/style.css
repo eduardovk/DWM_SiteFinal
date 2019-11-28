@@ -12,14 +12,14 @@ html {
 .hero-image {
     position: relative;
     text-shadow: 3px 3px rgba(0, 0, 0, .4);
+    background-color: black;
 }
 
 video{
     display: block;
     overflow: hidden;
-    min-width: 100%;
-    min-height: 200px;
-    max-height: 300px;
+    max-width: 100%;
+    opacity: 0.5;
 }
 
 .hero-text {
@@ -31,13 +31,49 @@ video{
     color: white;
 }
 
+@font-face {
+    font-family: 'Lego';
+    src: url('../fonts/legofont/legothick-webfont.woff');
+}
+
 .hero-text h1 {
-    font-size: 35px;
+    font-size: 20px;
+    font-family: Lego, sans-serif;
 }
 
 .hero-text p {
-    margin: 20px 0 20px 0;
     font-family: arial black;
+}
+
+.header-links-container{
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+.header-links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    position: absolute;
+    bottom: 15px;
+}
+
+.header-links a{
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(255, 86, 86,.4);
+    border-radius: 3px;
+    color: white;
+    transition: background-color .2s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .topnav {
@@ -104,7 +140,7 @@ body{
 .main{
     max-width: 1000px;
     margin: auto;
-    background-color: rgba(255,255,255,0.95);
+    background-color: rgba(255,255,255,0.9);
 
 
 }
@@ -113,6 +149,7 @@ body{
     text-align: center;
     padding: 25px 0px 25px 0px;
     font-size: 20px;
+    font-family: "Lego";
 }
 
 .mais {
@@ -396,7 +433,11 @@ footer div .icons {
     }
 
     .hero-text h1 {
-        font-size: 55px;
+        font-size: 45px;
+    }
+
+    .hero-text p {
+         margin: 20px 0 20px 0;
     }
 }
 
@@ -438,6 +479,15 @@ footer div .icons {
 
     .hero-text h1 {
         font-size: 85px;
+    }
+
+    .header-links-container{
+        display: block;
+    }
+
+    .hero-text p {
+        margin: 20px 0px 20px 0px;
+        font-size: 25px;
     }
 
 }
